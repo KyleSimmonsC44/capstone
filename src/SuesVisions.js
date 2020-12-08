@@ -6,7 +6,7 @@ import "./SuesVisions.css"
 
 export const SuesVisions = () => {
                 return(
-                    <>
+                    <> 
                     <NavBar/>
                     <ApplicationViews/>
                     </>

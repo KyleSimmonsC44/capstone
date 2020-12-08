@@ -1,5 +1,7 @@
 import React, { useRef } from "react"
 import { Link } from "react-router-dom";
+import { NavBar } from "../nav/NavBar";
+import { SuesVisions } from "../SuesVisions";
 import "./Login.css"
 
 
@@ -8,6 +10,10 @@ export const Login = props => {
     const password = useRef()
     const existDialog = useRef()
     const passwordDialog = useRef()
+
+    const handleClick = () => {
+      this.setState({ mssg: "Hi there!" });
+    };
 
     const existingUserCheck = () => {
         return fetch(`http://localhost:8088/users?email=${email.current.value}`)
@@ -41,7 +47,7 @@ export const Login = props => {
                 <div>Password does not match</div>
                 <button className="button--close" onClick={e => passwordDialog.current.close()}>Close</button>
             </dialog>
-            <section>
+            <section className="sectionDiv">
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Sue's Visions</h1>
                     <h2>Please sign in</h2>
@@ -62,7 +68,7 @@ export const Login = props => {
                             required />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button type="submit" onClick={()=>{NavBar()}}>
                             Sign in
                         </button>
                     </fieldset>

@@ -47,10 +47,11 @@ fieldset {
 }
 
 .form--login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-position-x: right;
     z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
@@ -66,3 +67,7 @@ fieldset {
     min-height: 5rem;
 }
 
+.sectionDiv{
+    display: flex;
+    justify-content: center;
+}
