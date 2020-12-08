@@ -7,6 +7,8 @@ export const NavBar = (props) => {
         localStorage.removeItem("app_login_id")
        
     }
+
+
     console.log(localStorage.getItem("app_login_id"))
     {if (localStorage.getItem("app_login_id") === "1"){
         return (
