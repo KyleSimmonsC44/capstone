@@ -1,0 +1,18 @@
+{
+  "bakedGoods": [],
+  "requestedBakedGood": [],
+  "users": [
+    {
+      "email": "admin@admin.com",
+      "password": "admin",
+      "name": "Admin Admin",
+      "id": 1
+    },
+    {
+      "email": "user1@user1.com",
+      "password": "user1",
+      "name": "user 1 user 1",
+      "id": 2
+    }
+  ]
+}
