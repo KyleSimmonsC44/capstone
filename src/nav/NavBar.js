@@ -13,7 +13,6 @@ export const NavBar = (props) => {
     {if (localStorage.getItem("app_login_id") === "1"){
         return (
             <ul className="navbar">
-            
             <li className="navbar__item">
                 <Link className="navbar__link" to="/about">About/Pricing</Link>
             </li>
@@ -26,7 +25,6 @@ export const NavBar = (props) => {
             <li className="navbar__item">
                     {localStorage.getItem("app_login_id") ? <Link className="navbar__link" to="/login" onClick={()=>{clearLocalStorage()}}>logout</Link>:<Link className="navbar__link" to="/login">login</Link> }
             </li>
-         
         </ul>
         )
     } else if (localStorage.getItem("app_login_id")){
@@ -40,7 +38,7 @@ export const NavBar = (props) => {
             <Link className="navbar__link" to="/gallery">Gallery</Link>
         </li>
         <li className="navbar__item">
-        <Link className="navbar__link" to="/cart">Cart</Link>            </li>
+        <Link className="navbar__link" to="/cart">Cart</Link></li>
         <li className="navbar__item">
                 {localStorage.getItem("app_login_id") ? <Link className="navbar__link" to="/login" onClick={()=>{clearLocalStorage()}}>logout</Link>:<Link className="navbar__link" to="/login">login</Link> }
         </li>
