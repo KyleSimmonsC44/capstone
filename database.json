@@ -1,6 +1,23 @@
 {
-  "bakedGoods": [],
-  "requestedBakedGood": [],
+  "bakedGoods": [
+    {
+      "name": "Cake",
+      "price": "prices vary depending on man hours needed for styling",
+      "id": 1
+    },
+    {
+      "name": "Cupcakes",
+      "price": "$2 per cupcake unless styling is needed. Sold in increments of 10.",
+      "id": 2
+    },
+    {
+      "name": "Cakepop",
+      "price": "$1 per cakepop unless styling is needed. Sold in increments of 10."
+    }
+  ],
+  "requestedBakedGood": [
+    
+  ],
   "users": [
     {
       "email": "admin@admin.com",
