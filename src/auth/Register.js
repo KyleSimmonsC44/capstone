@@ -1,4 +1,5 @@
 import React, { useRef } from "react"
+import { NavBar } from "../nav/NavBar"
 import "./Login.css"
 
 export const Register = (props) => {
@@ -63,6 +64,7 @@ export const Register = (props) => {
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
+            <section className="sectionDiv">
 
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Sue's Visions</h1>
@@ -87,9 +89,10 @@ export const Register = (props) => {
                     <input ref={verifyPassword} type="password" name="verifyPassword" className="form-control" placeholder="Verify password" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button type="submit" onClick={NavBar}> Sign in </button>
                 </fieldset>
             </form>
+            </section>
         </main>
     )
 }
