@@ -12,7 +12,8 @@
     },
     {
       "name": "Cake pops",
-      "price": 1
+      "price": 1,
+      "id": 3
     }
   ],
   "requestedBakedGood": [

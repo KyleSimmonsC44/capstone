@@ -124,6 +124,7 @@ export const OrderForm = (props) => {
         </fieldset>
         <fieldset>
           <div className="checkBox">
+              <label htmlFor="description">Description: </label>
             <input
              type="text"
              name="description"
@@ -132,7 +133,6 @@ export const OrderForm = (props) => {
              className="check"
              >
             </input>
-            <label htmlFor="description">Description</label>
           </div>
         </fieldset>
         <div className="button">
