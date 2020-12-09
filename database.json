@@ -23,8 +23,8 @@
       "quantity": 15,
       "dateNeededBy": "2020-12-31",
       "description": "I want caramel cupcakes with chocolate icing",
-      "accepted": false,
-      "completed": false,
+      "accepted": null,
+      "completed": null,
       "id": 1
     },
     {
@@ -33,8 +33,8 @@
       "quantity": null,
       "dateNeededBy": "2020-12-22",
       "description": "I want it to look like Among Us guys",
-      "accepted": false,
-      "completed": false,
+      "accepted": null,
+      "completed": null,
       "id": 2
     },
     {
@@ -43,8 +43,8 @@
       "quantity": 1,
       "dateNeededBy": "2020-12-29",
       "description": "thanos",
-      "accepted": false,
-      "completed": false,
+      "accepted": null,
+      "completed": null,
       "id": 3
     }
   ],
