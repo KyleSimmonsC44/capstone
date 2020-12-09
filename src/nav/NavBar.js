@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { UserContext } from "../auth/UserProvider"
 import "./NavBar.css"
@@ -9,6 +9,7 @@ export const NavBar = (props) => {
        
     }
     const { user, getUser } = useContext(UserContext)
+    const [loginState, setLoginState] = useState(0)
 
     useEffect(() =>{
         getUser()

@@ -12,7 +12,8 @@
     },
     {
       "name": "Cake pops",
-      "price": 1
+      "price": 1,
+      "id": 3
     }
   ],
   "requestedBakedGood": [
@@ -29,12 +30,22 @@
     {
       "bakedGoodId": 1,
       "userId": "2",
-      "quantity": 1,
+      "quantity": null,
       "dateNeededBy": "2020-12-22",
       "description": "I want it to look like Among Us guys",
       "accepted": false,
       "completed": false,
       "id": 2
+    },
+    {
+      "bakedGoodId": 1,
+      "userId": "2",
+      "quantity": 1,
+      "dateNeededBy": "2020-12-29",
+      "description": "thanos",
+      "accepted": false,
+      "completed": false,
+      "id": 3
     }
   ],
   "users": [
