@@ -10,6 +10,7 @@ export const Register = (props) => {
     const verifyPassword = useRef()
     const passwordDialog = useRef()
     const conflictDialog = useRef()
+    const admin = useRef(null)
 
     const existingUserCheck = () => {
         return fetch(`http://localhost:8088/users?email=${email.current.value}`)
@@ -32,7 +33,8 @@ export const Register = (props) => {
                             body: JSON.stringify({
                                 email: email.current.value,
                                 password: password.current.value,
-                                name: `${firstName.current.value} ${lastName.current.value}`
+                                name: `${firstName.current.value} ${lastName.current.value}`,
+                                admin: admin.current.checked
                             })
                         })
                             .then(_ => _.json())
@@ -80,6 +82,19 @@ export const Register = (props) => {
                     <label htmlFor="inputEmail"> Email address </label>
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
+                <fieldset>
+          <div className="checkBox">
+            <input
+             type="checkbox"
+             name="admin"
+             ref={admin}
+             id="userAdmin"
+             className="check"
+             >
+            </input>
+            <label htmlFor="admin">Admin</label>
+          </div>
+        </fieldset>
                 <fieldset>
                     <label htmlFor="inputPassword"> Password </label>
                     <input ref={password} type="password" name="password" className="form-control" placeholder="Password" required />

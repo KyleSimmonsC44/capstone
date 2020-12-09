@@ -2,34 +2,62 @@
   "bakedGoods": [
     {
       "name": "Cake",
-      "price": "prices vary depending on man hours needed for styling",
+      "price": null,
       "id": 1
     },
     {
       "name": "Cupcakes",
-      "price": "$2 per cupcake unless styling is needed. Sold in increments of 10.",
+      "price": 2,
       "id": 2
     },
     {
-      "name": "Cakepop",
-      "price": "$1 per cakepop unless styling is needed. Sold in increments of 10."
+      "name": "Cake pops",
+      "price": 1
     }
   ],
   "requestedBakedGood": [
-    
-  ],
-  "users": [
     {
-      "email": "admin@admin.com",
-      "password": "admin",
-      "name": "Admin Admin",
+      "bakedGoodId": 2,
+      "userId": "2",
+      "quantity": 15,
+      "dateNeededBy": "2020-12-31",
+      "description": "I want caramel cupcakes with chocolate icing",
+      "accepted": false,
+      "completed": false,
       "id": 1
     },
+    {
+      "bakedGoodId": 1,
+      "userId": "2",
+      "quantity": 1,
+      "dateNeededBy": "2020-12-22",
+      "description": "I want it to look like Among Us guys",
+      "accepted": false,
+      "completed": false,
+      "id": 2
+    }
+  ],
+  "users": [
     {
       "email": "user1@user1.com",
       "password": "user1",
       "name": "user 1 user 1",
+      "admin": false,
       "id": 2
+    },
+    {
+      "email": "user2@user2.com",
+      "password": "user2",
+      "name": "user 2 user 2",
+      "admin": false,
+      "id": 3
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "admin",
+      "name": "ad Admin",
+      "admin": true,
+      "id": 4
     }
   ]
 }

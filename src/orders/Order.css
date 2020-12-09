@@ -1,0 +1,116 @@
+.orders {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .order {
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid green;
+  }
+
+  .h1, h1 {
+    font-size: 2.5rem;
+}
+h2{
+    text-align: center;
+
+}
+fieldset {
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+}
+
+
+
+.form--login > fieldset > input[type="email"],
+.form--login > fieldset > input[type="password"] {
+    width: 25em;
+}
+
+
+.form-control {
+    display: block;
+    width: 94%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+
+.button--close {
+    position: relative;
+    bottom: -2rem;
+}
+
+.dialog {
+    min-width: 15rem;
+    min-height: 5rem;
+}
+
+.orderForm{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.buttonDiv{
+    display: flex;
+}
+
+.test{
+    display: flex;
+    flex-direction: row;
+}
+
+.testForm{
+    display: flex;
+    justify-content: center;
+}
+
+.form-group{
+    display: flex;
+}
+
+.testDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+fieldset{
+    margin: 1%;
+}
+
+.animalButton{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.orderDiv{
+    display: flex;
+    flex-direction: row;
+}
