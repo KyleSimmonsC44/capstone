@@ -63,8 +63,8 @@ export const OrderForm = (props) => {
           quantity: bakedGoodId === 1 ? 1 : parseInt(quantity.current.value),
           dateNeededBy: dateNeededBy.current.value,
           description: description.current.value,
-          accepted: false, 
-          completed: false
+          accepted: null, 
+          completed: null
       }).then(() => props.history.push("/"));
     }
   };
