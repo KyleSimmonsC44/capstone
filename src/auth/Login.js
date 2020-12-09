@@ -68,7 +68,7 @@ export const Login = props => {
                             required />
                     </fieldset>
                     <fieldset>
-                        <button type="submit" onClick={()=>{NavBar()}}>
+                        <button type="submit">
                             Sign in
                         </button>
                     </fieldset>
