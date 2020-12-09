@@ -105,9 +105,9 @@ fieldset{
     justify-content: space-evenly;
 }
 
-.button{
+.buttons{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .orderDiv{
