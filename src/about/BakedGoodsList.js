@@ -3,7 +3,6 @@ import { BakedGoodsContext } from "./BakedGoodsProvider"
 import {BakedGoods} from "./BakedGoods"
 
 export const BakedGoodsList = () => {
-    // This state changes when `getLocations()` is invoked below
     const { bakedGoods, getBakedGoods } = useContext(BakedGoodsContext)
 
     /*

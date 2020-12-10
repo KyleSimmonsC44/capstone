@@ -19,6 +19,17 @@ export const OrderProvider = (props) => {
             .then(setOrders)
     }
 
+    const updateOrders = (order) =>{
+        return fetch(`http://localhost:8088/requestedBakedGood/${order.id}`, {
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(order)
+        })
+        .then(getOrders)
+    }
+
     const addOrder = order => {
         return fetch("http://localhost:8088/requestedBakedGood", {
             method: "POST",
@@ -30,15 +41,10 @@ export const OrderProvider = (props) => {
             .then(getOrders)
     }
 
-    /*
-        You return a context provider which has the
-        `employees` state, the `addEmployee` function,
-        and the `getEmployee` function as keys. This
-        allows any child elements to access them.
-    */
+ 
     return (
         <OrderContext.Provider value={{
-            orders, addOrder, getOrders
+            orders, addOrder, getOrders, updateOrders
         }}>
             {props.children}
         </OrderContext.Provider>

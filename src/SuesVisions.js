@@ -21,7 +21,7 @@ export const SuesVisions = () => {
                         </>
                     )
                 } else {
-                    return <Redirect to="/login" />
+                    return <Route render={props => <ApplicationViews {...props} />} />
                 }
             }} />
             <Route path="/login" render={props => <Login {...props} setAuthUser={setAuthUser} />} />

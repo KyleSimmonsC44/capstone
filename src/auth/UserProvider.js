@@ -19,12 +19,7 @@ export const UserProvider = (props) => {
     }
 
 
-    /*
-        You return a context provider which has the
-        `locations` state, the `addLocation` function,
-        and the `getLocation` function as keys. This
-        allows any child elements to access them.
-    */
+  
     return (
         <UserContext.Provider value={{
             user, getUser

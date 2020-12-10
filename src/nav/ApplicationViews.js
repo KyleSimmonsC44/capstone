@@ -8,6 +8,8 @@ import { UserProvider } from "../auth/UserProvider"
 import { OrderForm } from "../orders/OrderForm"
 import { OrderProvider } from "../orders/OrderProvider"
 import { OrderList } from "../orders/OrderList"
+import { GalleryImageContext, GalleryImageProvider } from "../gallery/GalleryImageProvider"
+import { GalleryImageUploadComponent } from "../gallery/GalleryImageUploadComponent"
 
 export const ApplicationViews = (props) =>{
     return(
@@ -28,10 +30,15 @@ export const ApplicationViews = (props) =>{
                     />
                     <Route exact path="/adminhome" render={(props) => <OrderList {...props} />}
                     />
-                    
                     </UserProvider>
                     </BakedGoodsProvider>
                 </OrderProvider>
+            </article>
+            <article>
+                <GalleryImageProvider>
+                <Route exact path="/adminhome" render={(props) => <GalleryImageUploadComponent {...props}/>}
+                    />
+                </GalleryImageProvider>
             </article>
         </>
     )
