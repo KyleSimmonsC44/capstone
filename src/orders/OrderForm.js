@@ -27,8 +27,8 @@ export const OrderForm = (props) => {
           return (
             <fieldset>
             <div className="form-group">
-                <label for="quantity">How many would you like:</label>
-              <input name="quantity" id="quantity" ref={quantity} type="text">
+                <label for="quantity">How many would you like (Numerical values only):</label>
+              <input name="quantity" id="quantity" ref={quantity} type="number">
               </input>
             </div>
                 </fieldset>
@@ -38,20 +38,12 @@ export const OrderForm = (props) => {
       }
   }
 
-  /*
-  Get animal state and location state on initialization.
-  */
   useEffect(() => {
     getBakedGoods()
   }, []);
 
   const constructNewOrder = () => {
-    /*
-    The `location` and `animal` variables below are
-    the references attached to the input fields. You
-    can't just ask for the `.value` property directly,
-    but rather `.current.value` now in React.
-    */
+   
     const bakedGoodId = parseInt(bakedGood.current.value);
 
     if (!bakedGoodId) {
@@ -129,7 +121,7 @@ export const OrderForm = (props) => {
             type="submit"
             onClick={(evt) => {
               console.log("when will this display?")
-                evt.preventDefault(); // Prevent browser from submitting the form
+                evt.preventDefault(); 
                 constructNewOrder();
             }}
             className="btn btn-primary"

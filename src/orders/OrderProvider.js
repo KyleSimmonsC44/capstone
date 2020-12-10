@@ -30,12 +30,7 @@ export const OrderProvider = (props) => {
             .then(getOrders)
     }
 
-    /*
-        You return a context provider which has the
-        `employees` state, the `addEmployee` function,
-        and the `getEmployee` function as keys. This
-        allows any child elements to access them.
-    */
+ 
     return (
         <OrderContext.Provider value={{
             orders, addOrder, getOrders
