@@ -1,0 +1,8 @@
+.imageUpload{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonDiv{
+    margin-top: 1%;
+}

@@ -8,13 +8,6 @@ export const Order = ({order, bakedGood, user}) =>(
 <div>They want: {bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
         <div>Date Needed By: {order.dateNeededBy}</div>
-        <div className="buttons">
-            <button>
-                Accept
-            </button>
-            <button>
-                Deny
-            </button>
-        </div>
+       
     </div>
 )

@@ -19,6 +19,17 @@ export const OrderProvider = (props) => {
             .then(setOrders)
     }
 
+    const updateOrders = (order) =>{
+        return fetch(`http://localhost:8088/requestedBakedGood/${order.id}`, {
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(order)
+        })
+        .then(getOrders)
+    }
+
     const addOrder = order => {
         return fetch("http://localhost:8088/requestedBakedGood", {
             method: "POST",
@@ -33,7 +44,7 @@ export const OrderProvider = (props) => {
  
     return (
         <OrderContext.Provider value={{
-            orders, addOrder, getOrders
+            orders, addOrder, getOrders, updateOrders
         }}>
             {props.children}
         </OrderContext.Provider>

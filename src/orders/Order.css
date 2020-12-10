@@ -5,11 +5,6 @@
     justify-content: space-between;
   }
   
-  .order {
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid green;
-  }
 
   .h1, h1 {
     font-size: 2.5rem;
@@ -113,4 +108,10 @@ fieldset{
 .orderDiv{
     display: flex;
     flex-direction: row;
+}
+
+.orderCard{
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid green;
 }
