@@ -27,7 +27,7 @@ export const OrderForm = (props) => {
           return (
             <fieldset>
             <div className="form-group">
-                <label for="quantity">How many would you like (Numerical values only):</label>
+                <label htmlFor="quantity">How many would you like (Numerical values only):</label>
               <input name="quantity" id="quantity" ref={quantity} type="number">
               </input>
             </div>
@@ -71,6 +71,7 @@ export const OrderForm = (props) => {
             <div className="form-group">
               <label htmlFor="location">What baked good would you like?: </label>
               <select
+              required
                 defaultValue=""
                 name="location"
                 ref={bakedGood}

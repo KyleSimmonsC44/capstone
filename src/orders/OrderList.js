@@ -1,14 +1,16 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BakedGoodsContext } from "../about/BakedGoodsProvider";
 import { UserContext } from "../auth/UserProvider";
 import "./Order.css";
 import { OrderContext } from "./OrderProvider";
-import { Order } from "./Orders";
+import { OrderInbox } from "./OrderInbox";
+import { OrderDetails } from "./OrderDetails";
 
 export const OrderList = ({ history }) => {
   const { orders, getOrders, updateOrders } = useContext(OrderContext);
   const { bakedGoods, getBakedGoods } = useContext(BakedGoodsContext);
   const { user, getUser } = useContext(UserContext);
+  const [selectedDetail, setSelectedDetail] = useState(null)
 
   useEffect(() => {
     getUser().then(getBakedGoods).then(getOrders);
@@ -16,64 +18,28 @@ export const OrderList = ({ history }) => {
   return (
     <>
       <h3>Order Inbox</h3>
-      <div className="test">
+      <div className="test"> 
         {orders.map((order) => {
           const users = user.find(
             (u) => parseInt(u.id) === parseInt(order.userId)
           );
-          const bakedGood = bakedGoods.find(
-            (bg) => bg.id === order.bakedGoodId
-          );
           if (!order.responded) {
             return (
-              <div className="orderCard">
-                <Order
-                  key={order.id}
+              <div className="orderCard" key={order.id}>
+                <OrderInbox
                   user={users}
-                  bakedGood={bakedGood}
                   order={order}
                 />
-                <div className="buttons">
-                  <button
-                    onClick={() => {
-                      updateOrders({
-                        bakedGoodId: order.bakedGoodId,
-                        userId: order.userId,
-                        quantity: order.quantity,
-                        dateNeededBy: order.dateNeededBy,
-                        description: order.description,
-                        accepted: true,
-                        responded: true,
-                        completed: false,
-                        id: parseInt(order.id),
-                      });
-                    }}
-                  >
-                    Accept
-                  </button>
-                  <button
-                    onClick={() => {
-                        updateOrders({
-                            bakedGoodId: order.bakedGoodId,
-                            userId: order.userId,
-                            quantity: order.quantity,
-                            dateNeededBy: order.dateNeededBy,
-                            description: order.description,
-                            accepted: false,
-                            responded: true,
-                            completed: false,
-                            id: parseInt(order.id),
-                          });
-                    }}
-                  >
-                    Deny
-                  </button>
+                <div className="buttonDiv">
+
+              <button onClick={()=>{setSelectedDetail(order)}}>Show Details</button>
                 </div>
               </div>
             );
           }
         })}
       </div>
+      {selectedDetail && <OrderDetails order={selectedDetail}/>}
     </>
   );
 };

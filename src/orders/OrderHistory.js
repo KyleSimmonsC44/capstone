@@ -2,12 +2,13 @@ import React, { useContext } from "react"
 import "./Order.css"
 import { OrderContext } from "./OrderProvider"
 
-export const Order = ({order, bakedGood, user}) =>{
+export const OrderHistory = ({order, bakedGood, user}) =>{
     const { deleteOrder } = useContext(OrderContext)
+if(order.responded === true){
 
-if(order.accepted === true){
-    return(
-        <div className="order">
+    if(order.accepted === true && order.completed === false){
+        return(
+            <div className="order">
         <h3>You Ordered:</h3>
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
@@ -17,8 +18,8 @@ if(order.accepted === true){
     </div>
     )
 }else if(order.accepted === true && order.completed === true){
-   return(
-       <div className="order">
+    return(
+        <div className="order">
     <h3>You Ordered:</h3>
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
     <div>Description: {order.description}</div>
@@ -28,9 +29,10 @@ if(order.accepted === true){
     <button onClick={()=>{deleteOrder(order.id)}}>Remove Order</button>
     </div>
        )
-}
-else{
-    <div className="order">
+    }
+    else{
+        return(
+            <div className="order">
         <h3>You Ordered:</h3>
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
@@ -38,6 +40,18 @@ else{
         <p>Your Order has been declined</p>
         <button onClick={()=>{deleteOrder(order.id)}}>Remove Order</button>
     </div>
+)
+}
+}else{
+    return(
+        <div className="order">
+        <h3>You Ordered:</h3>
+<div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
+        <div>Description: {order.description}</div>
+        <div>Date Needed By: {order.dateNeededBy}</div>
+        <p>Your order is waiting to be reviewed</p>
+        </div>
+    )
 }
 }
 

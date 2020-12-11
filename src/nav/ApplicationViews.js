@@ -7,11 +7,13 @@ import { Register } from "../auth/Register"
 import { UserProvider } from "../auth/UserProvider"
 import { OrderForm } from "../orders/OrderForm"
 import { OrderProvider } from "../orders/OrderProvider"
-import { OrderList } from "../orders/OrderList"
+import { OrderDetails } from "../orders/OrderDetails"
 import { GalleryImageContext, GalleryImageProvider } from "../gallery/GalleryImageProvider"
 import { GalleryImageUploadComponent } from "../gallery/GalleryImageUploadComponent"
 import { GalleryImageList } from "../gallery/GalleryImageList"
 import { AcceptedOrderList } from "../orders/AcceptedOrderList"
+import { OrderHistoryList } from "../orders/OrderHistoryList"
+import { OrderList } from "../orders/OrderList"
 
 export const ApplicationViews = (props) =>{
     return(
@@ -30,9 +32,17 @@ export const ApplicationViews = (props) =>{
 
                     <Route exact path="/order" render={(props) => <OrderForm {...props} />}
                     />
+
                     <Route exact path="/adminhome" render={(props) => <OrderList {...props} />}
                     />
+
+                    {/* <Route exact path="/adminhome" render={(props) => <OrderDetails {...props} />}
+                    /> */}
+
                     <Route exact path="/adminhome" render={(props) => <AcceptedOrderList {...props} />}
+                    />
+
+                    <Route exact path="/orderhistory" render={(props) => <OrderHistoryList {...props} />}
                     />
                     
                     </UserProvider>
