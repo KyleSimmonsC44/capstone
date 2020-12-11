@@ -24,11 +24,10 @@ export const AcceptedOrderList = ({ history }) => {
           const bakedGood = bakedGoods.find(
             (bg) => bg.id === order.bakedGoodId
           );
-          if (order.responded && !order.completed) {
+          if (order.responded && !order.completed && order.accepted) {
             return (
-              <div className="orderCard">
+              <div className="orderCard" key={order.id}>
                 <Order
-                  key={order.id}
                   user={users}
                   bakedGood={bakedGood}
                   order={order}

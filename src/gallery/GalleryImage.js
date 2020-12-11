@@ -5,7 +5,7 @@ import { GalleryImageContext } from "./GalleryImageProvider"
 export const GalleryImage = ({url}) =>{
     const {deleteImage} = useContext(GalleryImageContext)
 
-    if(localStorage.getItem("admin") === true){
+    if(localStorage.getItem("admin") === "true"){
         return(
             <div className="imageDiv">
             <img src={url.url}/>

@@ -1,0 +1,36 @@
+import React, { useContext, useEffect } from "react"
+import { BakedGoodsContext } from "../about/BakedGoodsProvider"
+import { OrderContext } from "./OrderProvider"
+import { OrderHistory } from "./OrderHistory"
+
+export const OrderHistoryList = ({history}) =>{
+    const { bakedGoods, getBakedGoods } = useContext(BakedGoodsContext)
+    const { orders, getOrders } = useContext(OrderContext)
+
+    useEffect(() =>{
+        getBakedGoods()
+        .then(getOrders)
+    }, [])
+
+    return (
+        <>
+        <h1>Order History</h1>
+        <div className="test">
+            {
+                orders.map(order =>{
+                    const bakedGood = bakedGoods.find(
+                        (bg) => bg.id === order.bakedGoodId
+                      );
+                    if(order.userId === localStorage.getItem("app_login_id")){
+                        return(
+                            <div className="orderCard" key={order.id}>
+                                <OrderHistory bakedGood={bakedGood} order={order}/>
+                            </div>
+                        )
+                    }
+                })
+            }
+        </div>
+        </>
+    )
+}

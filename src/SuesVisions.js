@@ -9,7 +9,7 @@ import "./SuesVisions.css"
 import { useState } from "react"
 
 export const SuesVisions = () => {
-    const [authUser, setAuthUser] = useState(false)
+    const [authUser, setAuthUser] = useState(localStorage.getItem("app_login_id") || false)
     return (
         <>
             <Route render={props => <NavBar {...props} authUser={authUser}/>} />

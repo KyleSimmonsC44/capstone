@@ -41,10 +41,17 @@ export const OrderProvider = (props) => {
             .then(getOrders)
     }
 
+    const deleteOrder = orderId => {
+        return fetch(`http://localhost:8088/requestedBakedGood/${orderId}`,{
+            method: "DELETE"
+        })
+            .then(getOrders)
+    }
+
  
     return (
         <OrderContext.Provider value={{
-            orders, addOrder, getOrders, updateOrders
+            orders, addOrder, getOrders, updateOrders, deleteOrder
         }}>
             {props.children}
         </OrderContext.Provider>

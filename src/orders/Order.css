@@ -66,9 +66,10 @@ fieldset {
 
 .buttonDiv{
     display: flex;
+    margin-top: 1%;
 }
 
-.test{
+.test, .hiddenDiv{
     display: flex;
     flex-direction: row;
 }
