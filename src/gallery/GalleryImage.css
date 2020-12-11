@@ -1,8 +1,28 @@
 .imageUpload{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .buttonDiv{
     margin-top: 1%;
+}
+
+img{
+    width: 400px;
+}
+
+.imageDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.galleryUpload{
+    display: flex;
+    justify-content: center;
 }

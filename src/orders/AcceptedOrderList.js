@@ -5,7 +5,7 @@ import "./Order.css";
 import { OrderContext } from "./OrderProvider";
 import { Order } from "./Orders";
 
-export const OrderList = ({ history }) => {
+export const AcceptedOrderList = ({ history }) => {
   const { orders, getOrders, updateOrders } = useContext(OrderContext);
   const { bakedGoods, getBakedGoods } = useContext(BakedGoodsContext);
   const { user, getUser } = useContext(UserContext);
@@ -15,7 +15,7 @@ export const OrderList = ({ history }) => {
   }, []);
   return (
     <>
-      <h3>Order Inbox</h3>
+      <h3>Cakes To Make</h3>
       <div className="test">
         {orders.map((order) => {
           const users = user.find(
@@ -24,7 +24,7 @@ export const OrderList = ({ history }) => {
           const bakedGood = bakedGoods.find(
             (bg) => bg.id === order.bakedGoodId
           );
-          if (!order.responded) {
+          if (order.responded && !order.completed) {
             return (
               <div className="orderCard">
                 <Order
@@ -44,30 +44,14 @@ export const OrderList = ({ history }) => {
                         description: order.description,
                         accepted: true,
                         responded: true,
-                        completed: false,
+                        completed: true,
                         id: parseInt(order.id),
                       });
                     }}
                   >
-                    Accept
+                    Completed
                   </button>
-                  <button
-                    onClick={() => {
-                        updateOrders({
-                            bakedGoodId: order.bakedGoodId,
-                            userId: order.userId,
-                            quantity: order.quantity,
-                            dateNeededBy: order.dateNeededBy,
-                            description: order.description,
-                            accepted: false,
-                            responded: true,
-                            completed: false,
-                            id: parseInt(order.id),
-                          });
-                    }}
-                  >
-                    Deny
-                  </button>
+                  
                 </div>
               </div>
             );

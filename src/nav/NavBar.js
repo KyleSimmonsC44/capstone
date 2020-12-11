@@ -25,6 +25,11 @@ export const NavBar = (props) => {
             </li>
             }
             {props.authUser && localStorage.getItem("admin") === "false" &&
+            <li className="navbar__item">
+            <Link className="navbar__link" to="/orderhistory">Order History</Link>
+            </li>
+            }
+            {props.authUser && localStorage.getItem("admin") === "false" &&
                 <li className="navbar__item">
             <Link className="navbar__link" to="/order">Order Form</Link>
             </li>

@@ -10,6 +10,8 @@ import { OrderProvider } from "../orders/OrderProvider"
 import { OrderList } from "../orders/OrderList"
 import { GalleryImageContext, GalleryImageProvider } from "../gallery/GalleryImageProvider"
 import { GalleryImageUploadComponent } from "../gallery/GalleryImageUploadComponent"
+import { GalleryImageList } from "../gallery/GalleryImageList"
+import { AcceptedOrderList } from "../orders/AcceptedOrderList"
 
 export const ApplicationViews = (props) =>{
     return(
@@ -30,16 +32,27 @@ export const ApplicationViews = (props) =>{
                     />
                     <Route exact path="/adminhome" render={(props) => <OrderList {...props} />}
                     />
+                    <Route exact path="/adminhome" render={(props) => <AcceptedOrderList {...props} />}
+                    />
+                    
                     </UserProvider>
                     </BakedGoodsProvider>
                 </OrderProvider>
             </article>
-            <article>
+            <article className="galleryUpload">
                 <GalleryImageProvider>
                 <Route exact path="/adminhome" render={(props) => <GalleryImageUploadComponent {...props}/>}
                     />
-                </GalleryImageProvider>
+            </GalleryImageProvider>
             </article>
+            <article>
+                <GalleryImageProvider>
+
+                    <Route exact path="/gallery" render={(props) => <GalleryImageList {...props}/>}
+                    />
+                    </GalleryImageProvider>
+                    </article>
+         
         </>
     )
 }
