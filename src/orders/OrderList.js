@@ -7,14 +7,17 @@ import { OrderInbox } from "./OrderInbox";
 import { OrderDetails } from "./OrderDetails";
 
 export const OrderList = ({ history }) => {
-  const { orders, getOrders, updateOrders } = useContext(OrderContext);
+  const { orders, getOrders, updateOrders, setSelectedDetail, selectedDetail } = useContext(OrderContext);
   const { bakedGoods, getBakedGoods } = useContext(BakedGoodsContext);
   const { user, getUser } = useContext(UserContext);
-  const [selectedDetail, setSelectedDetail] = useState(null)
-
   useEffect(() => {
-    getUser().then(getBakedGoods).then(getOrders);
+    getBakedGoods().then(getUser).then(getOrders);
   }, []);
+// useEffect is watching orders to change to run getUser()
+  useEffect(() =>{
+    getUser()
+  },[orders]);
+
   return (
     <>
       <h3>Order Inbox</h3>
@@ -31,7 +34,7 @@ export const OrderList = ({ history }) => {
                   order={order}
                 />
                 <div className="buttonDiv">
-
+            {/* show details button sets the selectedDetail variable to  the specific order that has been chosen*/}
               <button onClick={()=>{setSelectedDetail(order)}}>Show Details</button>
                 </div>
               </div>
@@ -39,7 +42,8 @@ export const OrderList = ({ history }) => {
           }
         })}
       </div>
-      {selectedDetail && <OrderDetails order={selectedDetail}/>}
+      {/* if selected detail has a value and responded is false, render the order details */}
+      {(selectedDetail && !selectedDetail.responded) && <OrderDetails order={selectedDetail}/>}
     </>
   );
 };

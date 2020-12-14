@@ -3,9 +3,7 @@ import "./Order.css"
 import { OrderContext } from "./OrderProvider";
 
 export const Order = ({order, bakedGood, user}) =>{
-
-    const { updateOrders } = useContext(OrderContext)
-    
+    const { updateOrders, setSelectedDetail } = useContext(OrderContext)
 return(
 <div className="order">
     <h3>You have an order!</h3>
@@ -16,6 +14,7 @@ return(
         {!order.responded &&
         <div className="buttons">
                   <button
+                //   update the order booleans
                     onClick={() => {
                         updateOrders({
                             bakedGoodId: order.bakedGoodId,
@@ -27,13 +26,16 @@ return(
                         responded: true,
                         completed: false,
                         id: parseInt(order.id),
-                    });
+                    })
+                    // set the Selected Detail value to null to remove it from the detail order component
+                    setSelectedDetail(null);
                 }}
                 >
                     Accept
                   </button>
                   <button
                     onClick={() => {
+                        //   update the order booleans
                         updateOrders({
                             bakedGoodId: order.bakedGoodId,
                             userId: order.userId,
@@ -45,6 +47,8 @@ return(
                             completed: false,
                             id: parseInt(order.id),
                         });
+                        // set the Selected Detail value to null to remove it from the detail order component
+                        setSelectedDetail(null)
                     }}
                     >
                     Deny

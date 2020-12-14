@@ -11,7 +11,7 @@ export const OrderContext = React.createContext()
  */
 export const OrderProvider = (props) => {
     const [orders, setOrders] = useState([])
-
+    const [selectedDetail, setSelectedDetail] = useState(null)
 
     const getOrders = () => {
         return fetch("http://localhost:8088/requestedBakedGood")
@@ -51,7 +51,7 @@ export const OrderProvider = (props) => {
  
     return (
         <OrderContext.Provider value={{
-            orders, addOrder, getOrders, updateOrders, deleteOrder
+            orders, addOrder, getOrders, updateOrders, deleteOrder, setSelectedDetail, selectedDetail
         }}>
             {props.children}
         </OrderContext.Provider>

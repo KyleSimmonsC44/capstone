@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import "./Order.css"
 import { OrderContext } from "./OrderProvider"
-
+// sets all of the conditional logic for the user's order history. 
 export const OrderHistory = ({order, bakedGood, user}) =>{
     const { deleteOrder } = useContext(OrderContext)
 if(order.responded === true){

@@ -18,68 +18,26 @@
   ],
   "requestedBakedGood": [
     {
-      "bakedGoodId": 2,
-      "userId": "2",
-      "quantity": 15,
-      "dateNeededBy": "2020-12-31",
-      "description": "I want caramel cupcakes with chocolate icing",
-      "responded": false,
-      "accepted": false,
-      "completed": false,
-      "id": 1
-    },
-    {
       "bakedGoodId": 1,
       "userId": "2",
       "quantity": 1,
-      "dateNeededBy": "2020-12-22",
-      "description": "I want it to look like Among Us guys",
-      "accepted": false,
-      "responded": true,
-      "completed": false,
-      "id": 2
-    },
-    {
-      "bakedGoodId": 1,
-      "userId": "2",
-      "quantity": 1,
-      "dateNeededBy": "2020-12-29",
+      "dateNeededBy": "2020-12-25",
       "description": "thanos",
       "accepted": true,
       "responded": true,
       "completed": false,
-      "id": 3
-    },
-    {
-      "bakedGoodId": 3,
-      "userId": "2",
-      "quantity": 5,
-      "dateNeededBy": "2020-12-28",
-      "description": "red velvet if available",
-      "accepted": true,
-      "responded": true,
-      "completed": true,
-      "id": 4
+      "id": 6
     },
     {
       "bakedGoodId": 1,
-      "userId": "3",
+      "userId": "2",
       "quantity": 1,
-      "dateNeededBy": "2020-12-27",
+      "dateNeededBy": "2020-12-25",
       "description": "I want it to have the Jisie's Gate Logo",
-      "accepted": null,
-      "completed": null,
-      "id": 5
-    },
-    {
-      "bakedGoodId": 2,
-      "userId": "3",
-      "quantity": 10,
-      "dateNeededBy": "2020-12-27",
-      "description": "red velvet if available",
-      "accepted": null,
-      "completed": null,
-      "id": 6
+      "accepted": false,
+      "responded": true,
+      "completed": false,
+      "id": 7
     }
   ],
   "users": [
@@ -91,31 +49,28 @@
       "id": 2
     },
     {
-      "email": "user2@user2.com",
-      "password": "user2",
-      "name": "user 2 user 2",
+      "email": "travis@milner.net",
+      "password": "travis",
+      "name": "travis milner",
       "admin": false,
       "id": 3
     },
     {
       "email": "admin@admin.com",
       "password": "admin",
-      "name": "ad Admin",
+      "name": "admin admin",
       "admin": true,
       "id": 4
-    },
-    {
-      "email": "user3@user3.com",
-      "password": "user3",
-      "name": "user 3",
-      "admin": false,
-      "id": 5
     }
   ],
   "images": [
     {
       "url": "http://res.cloudinary.com/dksimmons/image/upload/v1607706440/test-images/zigzxqdvi44psdirw8jb.png",
       "id": 3
+    },
+    {
+      "url": "http://res.cloudinary.com/dksimmons/image/upload/v1607958899/test-images/cdo0luefwjingfklubra.jpg",
+      "id": 10
     }
   ]
 }
