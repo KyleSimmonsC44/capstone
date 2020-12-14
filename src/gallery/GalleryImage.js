@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import "./GalleryImage.css"
 import { GalleryImageContext } from "./GalleryImageProvider"
-
+// delete button only renders if the user is an admin
 export const GalleryImage = ({url}) =>{
     const {deleteImage} = useContext(GalleryImageContext)
 

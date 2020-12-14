@@ -21,8 +21,8 @@ export const OrderForm = (props) => {
   const quantity = useRef(null)
   const dateNeededBy = useRef(null)
   const description = useRef(null)
-//  change quantity to input field
-  const renderDropdown = () =>{
+//  whenever the dropdown has an id of 2 of 3, which is the id for the cupcakes and cake pops, render the number field
+  const renderInput = () =>{
       if (dropdown === "2" || dropdown === "3"){
           return (
             <fieldset>
@@ -55,8 +55,9 @@ export const OrderForm = (props) => {
           quantity: bakedGoodId === 1 ? 1 : parseInt(quantity.current.value),
           dateNeededBy: dateNeededBy.current.value,
           description: description.current.value,
-          accepted: null, 
-          completed: null
+          accepted: false,
+          responded: false,
+          completed: false
       }).then(() => props.history.push("/"));
     }
   };
@@ -77,6 +78,7 @@ export const OrderForm = (props) => {
                 ref={bakedGood}
                 id="orderLocation"
                 className="form-control"
+                // when ever a dropdown is selected, set the dropdown value to be equal to the baked good's id
                 onChange ={ev=>{
                     setdropdown(ev.target.value)
                 }}
@@ -90,7 +92,7 @@ export const OrderForm = (props) => {
               </select>
             </div>
           </fieldset>
-                    {renderDropdown()}
+                    {renderInput()}
       <fieldset>
           <div className="form-group">
             <label htmlFor="orderPay">Date Needed By: </label>

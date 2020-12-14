@@ -6,7 +6,7 @@ import "./NavBar.css"
 export const NavBar = (props) => {
     const clearLocalStorage = () =>{
         localStorage.removeItem("app_login_id")
-       
+        localStorage.removeItem("admin")
     }
 
     const currentUser = localStorage.getItem("app_login_id")
