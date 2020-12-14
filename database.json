@@ -19,25 +19,36 @@
   "requestedBakedGood": [
     {
       "bakedGoodId": 1,
-      "userId": "2",
+      "userId": "5",
       "quantity": 1,
-      "dateNeededBy": "2020-12-25",
-      "description": "thanos",
+      "dateNeededBy": "2020-12-23",
+      "description": "red velvet if available",
       "accepted": true,
       "responded": true,
       "completed": false,
-      "id": 6
+      "id": 8
+    },
+    {
+      "bakedGoodId": 2,
+      "userId": "5",
+      "quantity": 10,
+      "dateNeededBy": "2020-12-17",
+      "description": "I want it to have the Jisie's Gate Logo",
+      "accepted": true,
+      "responded": true,
+      "completed": false,
+      "id": 9
     },
     {
       "bakedGoodId": 1,
-      "userId": "2",
+      "userId": "5",
       "quantity": 1,
-      "dateNeededBy": "2020-12-25",
+      "dateNeededBy": "2020-12-18",
       "description": "I want it to have the Jisie's Gate Logo",
       "accepted": false,
       "responded": true,
       "completed": false,
-      "id": 7
+      "id": 10
     }
   ],
   "users": [
@@ -61,6 +72,20 @@
       "name": "admin admin",
       "admin": true,
       "id": 4
+    },
+    {
+      "email": "mario@mario.com",
+      "password": "mario",
+      "name": "mario campopiano",
+      "admin": false,
+      "id": 5
+    },
+    {
+      "email": "admin2@admin.com",
+      "password": "admin",
+      "name": "admin2 admin",
+      "admin": true,
+      "id": 6
     }
   ],
   "images": [
