@@ -1,9 +1,12 @@
 import React, { useContext, useEffect } from "react"
 import { BakedGoodsContext } from "./BakedGoodsProvider"
 import {BakedGoods} from "./BakedGoods"
+import { AboutContext } from "./AboutProvider"
+import { About } from "./About.js"
 
-export const BakedGoodsList = () => {
+export const BakedGoodsList = (props) => {
     const { bakedGoods, getBakedGoods } = useContext(BakedGoodsContext)
+    const { about, getAbout } = useContext(AboutContext)
 
     /*
         What's the effect this is reponding to? Component was
@@ -11,8 +14,11 @@ export const BakedGoodsList = () => {
         then gets the data, then re-renders.
     */
     useEffect(() => {
-        console.log("BakedGoodsList: Initial render before data")
         getBakedGoods()
+    }, [])
+
+    useEffect(() => {
+        getAbout()
     }, [])
     
     /*
@@ -24,9 +30,9 @@ export const BakedGoodsList = () => {
 
         <div className="aboutSection">
             <h3 className="bakedGoods__name">About Us!</h3>
-            <div className="aboutUsDiv">
-            We are a family bakery based out of Nashville, TN that specializes in elaborate cake design, and any traditional southern deserts. Our family matriarch, Sue, has been teaching all of her children and grandchildren the wonderful art of baking since as soon as we could stand on a stool and lick batter off of a spoon. We are proud to share our baked goods with you all! Feel free to check out the gallery to view any past designs done by Sue herself, or to place an order once you make an account with us!
-            </div>
+            {
+                about.map(a => <About key={a.id} about={a} props={props}/>)
+            }
         <div className="bakedgoods">
             <h3  className="bakedGoods__name">We're Currently Baking:</h3>
         {

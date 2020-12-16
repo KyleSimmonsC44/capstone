@@ -15,16 +15,27 @@ import { AcceptedOrderList } from "../orders/AcceptedOrderList"
 import { OrderHistoryList } from "../orders/OrderHistoryList"
 import { OrderList } from "../orders/OrderList"
 import { Homepage } from "../landingpage/Homepage"
+import { About } from "../about/About"
+import { AboutProvider } from "../about/AboutProvider"
+import { EditAboutForm } from "../about/EditAboutForm"
 
 export const ApplicationViews = (props) =>{
     return(
         <>
         <article className="about">
 
+            <AboutProvider>
         <BakedGoodsProvider>
             <Route exact path="/about" render={(props) => <BakedGoodsList {...props} />}
             />
+            
         </BakedGoodsProvider>
+            </AboutProvider>
+            </article>
+            <article>
+                <AboutProvider>
+                    <Route path="/about/edit/:aboutId(\d+)" render={(props) => <EditAboutForm {...props}/>}/>
+                </AboutProvider>
             </article>
             <article className="adminHome">
                 <OrderProvider>
