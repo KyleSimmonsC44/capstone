@@ -1,5 +1,5 @@
-/* Adding CSS manually is only necessary in JSFiddle,
-   where CSS can't be inserted into the <head> */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
    .typed-cursor{
     opacity: 0;
     animation: typedjsBlink 0.7s infinite;
@@ -50,4 +50,7 @@
 
   .logoTitle{
       margin: 0;
+      color: rgb(93, 53, 38);
+      font-family: 'Indie Flower', cursive;
+      font-weight: bold;
   }

@@ -13,7 +13,7 @@ if(order.responded === true){
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
         <div>Date Needed By: {order.dateNeededBy}</div>
-        <div class="dynamicHistoryResponses">
+        <div className="dynamicHistoryResponses">
         Your order has been accepted!
         Your order is beind prepared
         </div>

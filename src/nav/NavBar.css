@@ -21,3 +21,11 @@
     color: black;
     text-decoration: none;
 }
+
+.navbar__link:hover{
+    transition: .3s;
+    padding: 8px;
+    color: white;
+    background-color:  rgba(0,0,0, 0.4);
+    border-radius: 5px;
+}

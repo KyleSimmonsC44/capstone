@@ -13,9 +13,8 @@ export const BakedGoodsList = () => {
     useEffect(() => {
         console.log("BakedGoodsList: Initial render before data")
         getBakedGoods()
-        console.log(bakedGoods)
     }, [])
-
+    
     /*
         This effect is solely for learning purposes. The effect
         it is responding to is that the location state changed.

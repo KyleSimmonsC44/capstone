@@ -54,7 +54,7 @@ fieldset {
     justify-content: center;
     background-position-x: right;
     z-index: 2;
-    background-color:  rgba(0,0,0, 0.4);;
+    background-color:  rgba(0,0,0, 0.5);;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     color: white;

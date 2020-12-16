@@ -1,7 +1,7 @@
 {
   "bakedGoods": [
     {
-      "name": "Cake",
+      "name": "Cakes",
       "price": null,
       "id": 1
     },
@@ -69,7 +69,7 @@
       "description": "I want caramel cupcakes with chocolate icing",
       "accepted": true,
       "responded": true,
-      "completed": false,
+      "completed": true,
       "id": 13
     },
     {
@@ -79,7 +79,7 @@
       "dateNeededBy": "2020-12-28",
       "description": "I want it to look like Among Us guys",
       "accepted": false,
-      "responded": false,
+      "responded": true,
       "completed": false,
       "id": 14
     },
@@ -89,9 +89,9 @@
       "quantity": 10,
       "dateNeededBy": "2020-12-18",
       "description": "I want it to look like Among Us guys",
-      "accepted": false,
-      "responded": false,
-      "completed": false,
+      "accepted": true,
+      "responded": true,
+      "completed": true,
       "id": 15
     },
     {
@@ -101,7 +101,7 @@
       "dateNeededBy": "2020-12-25",
       "description": "thanos",
       "accepted": false,
-      "responded": false,
+      "responded": true,
       "completed": false,
       "id": 16
     },
@@ -111,10 +111,43 @@
       "quantity": 10,
       "dateNeededBy": "2020-12-26",
       "description": "mvp",
-      "accepted": false,
-      "responded": false,
-      "completed": false,
+      "accepted": true,
+      "responded": true,
+      "completed": true,
       "id": 17
+    },
+    {
+      "bakedGoodId": 2,
+      "userId": "2",
+      "quantity": 10,
+      "dateNeededBy": "2020-12-23",
+      "description": "I want it to look like Among Us guys",
+      "accepted": false,
+      "responded": true,
+      "completed": false,
+      "id": 18
+    },
+    {
+      "bakedGoodId": 1,
+      "userId": "8",
+      "quantity": 1,
+      "dateNeededBy": "2020-12-25",
+      "description": "German Chocolate cake",
+      "accepted": false,
+      "responded": true,
+      "completed": false,
+      "id": 19
+    },
+    {
+      "bakedGoodId": 3,
+      "userId": "7",
+      "quantity": 10,
+      "dateNeededBy": "2020-12-28",
+      "description": "thanos",
+      "accepted": true,
+      "responded": true,
+      "completed": true,
+      "id": 20
     }
   ],
   "users": [
@@ -159,6 +192,13 @@
       "name": "user 2 user2",
       "admin": false,
       "id": 7
+    },
+    {
+      "email": "tim@tom.com",
+      "password": "tim",
+      "name": "tim tom",
+      "admin": false,
+      "id": 8
     }
   ],
   "images": [
