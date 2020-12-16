@@ -20,8 +20,8 @@ export const OrderList = ({ history }) => {
 
   return (
     <>
+      <div className="test--left"> 
       <h3>Order Inbox</h3>
-      <div className="test"> 
         {orders.map((order) => {
           const users = user.find(
             (u) => parseInt(u.id) === parseInt(order.userId)

@@ -56,6 +56,7 @@ export const Register = (props) => {
 
   return (
     <main style={{ textAlign: "center" }}>
+      <div className="bg-image"></div>
       <dialog className="dialog dialog--password" ref={passwordDialog}>
         <div>Passwords do not match</div>
         <button
@@ -148,11 +149,13 @@ export const Register = (props) => {
               required
             />
           </fieldset>
-          <fieldset>
+          <fieldset className="signInButton">
+            <div className="submitButton">
             <button type="submit" onClick={NavBar}>
               {" "}
               Sign in{" "}
             </button>
+            </div>
           </fieldset>
         </form>
       </section>

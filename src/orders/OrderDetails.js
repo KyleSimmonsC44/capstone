@@ -37,8 +37,8 @@ export const OrderDetails = ({ order }) => {
   }
   return (
       <>
+      <div className="test--center"> 
       <h3>Order Details</h3>
-      <div className="test"> 
       {buildOrderDetail()}
     
         

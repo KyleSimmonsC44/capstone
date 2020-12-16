@@ -14,18 +14,19 @@ import { GalleryImageList } from "../gallery/GalleryImageList"
 import { AcceptedOrderList } from "../orders/AcceptedOrderList"
 import { OrderHistoryList } from "../orders/OrderHistoryList"
 import { OrderList } from "../orders/OrderList"
+import { Homepage } from "../landingpage/Homepage"
 
 export const ApplicationViews = (props) =>{
     return(
         <>
-        <article className="aboutSection">
+        <article className="about">
 
         <BakedGoodsProvider>
             <Route exact path="/about" render={(props) => <BakedGoodsList {...props} />}
             />
         </BakedGoodsProvider>
             </article>
-            <article>
+            <article className="adminHome">
                 <OrderProvider>
                     <BakedGoodsProvider>
                         <UserProvider>
@@ -61,6 +62,18 @@ export const ApplicationViews = (props) =>{
                     <Route exact path="/gallery" render={(props) => <GalleryImageList {...props}/>}
                     />
                     </GalleryImageProvider>
+                    </article>
+                    <article>
+                        <Route exact path="/" render={(props) => <Homepage {...props} strings={[
+    	'We are grandparents',
+      'We are parents',
+      'We are engineers',
+      'We are interior designers',
+      'We are teachers',
+      'We are artists',
+      'We are One Big Happy Family'
+    ]}/>}
+                        />
                     </article>
          
         </>

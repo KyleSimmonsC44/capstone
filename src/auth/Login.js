@@ -69,15 +69,17 @@ export const Login = props => {
                             placeholder="Password"
                             required />
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="signInButton">
+                        <div className="submitButton">
                         <button type="submit">
                             Sign in
                         </button>
+                        </div>
                     </fieldset>
-                </form>
-            </section>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link className="registerLink" to="/register">Not a member yet?</Link>
+            </section>
+                </form>
             </section>
         </main>
     )
