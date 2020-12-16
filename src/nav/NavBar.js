@@ -10,7 +10,7 @@ export const NavBar = (props) => {
     }
 
     const currentUser = localStorage.getItem("app_login_id")
-        console.log("Auth User", props.authUser, localStorage.getItem("admin"))
+        console.log("props", props)
             return (
                 <ul className="navbar">
             <li className="navbar__item">
