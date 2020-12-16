@@ -28,7 +28,7 @@ export const OrderForm = (props) => {
             <fieldset>
             <div className="form-group">
                 <label htmlFor="quantity">How many would you like (Numerical values only):</label>
-              <input name="quantity" id="quantity" ref={quantity} type="number">
+              <input name="quantity" id="quantity" ref={quantity} type="number" className="form-control">
               </input>
             </div>
                 </fieldset>
@@ -97,6 +97,7 @@ export const OrderForm = (props) => {
           <div className="form-group">
             <label htmlFor="orderPay">Date Needed By: </label>
             <input
+            name="orderPay"
               type="date"
               id="orderPay"
               ref={dateNeededBy}
@@ -115,6 +116,7 @@ export const OrderForm = (props) => {
              ref={description}
              id="description"
              className="check"
+             className="form-control"
              >
             </input>
           </div>

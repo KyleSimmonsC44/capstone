@@ -13,8 +13,10 @@ if(order.responded === true){
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
         <div>Date Needed By: {order.dateNeededBy}</div>
-        <p>Your order has been accepted!</p>
-        <p>Your order is beind prepared</p>
+        <div class="dynamicHistoryResponses">
+        Your order has been accepted!
+        Your order is beind prepared
+        </div>
     </div>
     )
 }else if(order.accepted === true && order.completed === true){
@@ -24,8 +26,10 @@ if(order.responded === true){
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
     <div>Description: {order.description}</div>
     <div>Date Needed By: {order.dateNeededBy}</div>
-    <p>Your order has been accepted!</p>
-    <p>Your order is ready to be picked up!</p>
+    <div className="dynamicHistoryResponses">
+    Your order has been accepted!
+    Your order is ready to be picked up!
+    </div>
     <button onClick={()=>{deleteOrder(order.id)}}>Remove Order</button>
     </div>
        )
@@ -37,7 +41,10 @@ if(order.responded === true){
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
         <div>Date Needed By: {order.dateNeededBy}</div>
-        <p>Your Order has been declined</p>
+        <div className="dynamicHistoryResponses">
+
+        Your Order has been declined
+        </div>
         <button onClick={()=>{deleteOrder(order.id)}}>Remove Order</button>
     </div>
 )
@@ -49,7 +56,9 @@ if(order.responded === true){
 <div>{bakedGood.name === "Cake" ? bakedGood.name : order.quantity + " " + bakedGood.name} </div>
         <div>Description: {order.description}</div>
         <div>Date Needed By: {order.dateNeededBy}</div>
-        <p>Your order is waiting to be reviewed</p>
+        <div className="dynamicHistoryResponses">
+        Your order is waiting to be reviewed
+        </div>
         </div>
     )
 }

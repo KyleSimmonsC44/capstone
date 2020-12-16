@@ -9,9 +9,9 @@
   .h1, h1 {
     font-size: 2.5rem;
 }
-h2{
+h2, h3{
     text-align: center;
-
+    font-weight: lighter;
 }
 fieldset {
     min-width: 0;
@@ -43,6 +43,7 @@ fieldset {
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow:         inset 0 0 4px rgba(0,0,0,0.5);
 }
 
 
@@ -71,7 +72,7 @@ fieldset {
 
 .test, .hiddenDiv{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .testForm{
@@ -87,9 +88,14 @@ fieldset {
     display: flex;
     flex-direction: column;
     padding: 2%;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 10px;
     margin-top: 2%;
+    color: white;
+    border: 3px solid #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 2;
+    background-color:  rgba(0,0,0, 0.4);;
 }
 
 fieldset{
@@ -114,5 +120,31 @@ fieldset{
 .orderCard{
     margin: 1em;
     padding: 1em;
-    border: 1px solid green;
+    color: white;
+    border: 3px solid #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 2;
+    background-color:  rgba(0,0,0, 0.4);;
+    width: 350px;
 }
+
+.adminHome{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.test--center{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 33%;
+}
+
+.dynamicHistoryResponses{
+    color: white;
+}
+
+.test--left, .test--right{
+    flex-direction: column;
+    justify-content: center;
+}
+

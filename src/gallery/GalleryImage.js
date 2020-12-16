@@ -9,8 +9,8 @@ export const GalleryImage = ({url}) =>{
         return(
             <div className="imageDiv">
             <img src={url.url}/>
-            <div className="buttonDiv">
-            <button onClick={()=>{deleteImage(url.id)}}>&times;</button>
+            <div  className="buttonDiv">
+            <button className="galleryDeleteButton" onClick={()=>{deleteImage(url.id)}}>&times;</button>
             </div>
         </div>
         )

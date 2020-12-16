@@ -15,8 +15,8 @@ export const AcceptedOrderList = ({ history }) => {
   }, []);
   return (
     <>
+      <div className="test--right">
       <h3>Cakes To Make</h3>
-      <div className="test">
         {orders.map((order) => {
           const users = user.find(
             (u) => parseInt(u.id) === parseInt(order.userId)

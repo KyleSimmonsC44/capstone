@@ -1,0 +1,53 @@
+/* Adding CSS manually is only necessary in JSFiddle,
+   where CSS can't be inserted into the <head> */
+   .typed-cursor{
+    opacity: 0;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+  }
+  @keyframes typedjsBlink{
+    50% { opacity: 0.0; }
+  }
+  @-webkit-keyframes typedjsBlink{
+    0% { opacity: 0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 0; }
+  }
+  .typed-fade-out{
+    opacity: 0;
+    transition: opacity .25s;
+    -webkit-animation: 0;
+    animation: 0;
+  }
+
+  .type-wrap{
+      display: flex;
+      flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 25vw;
+    color: white;
+    border: 3px solid #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 2;
+    background-color:  rgba(0,0,0, 0.4);;
+    width: 350px;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .logo{
+      margin-top: 0;
+      background-image: url("../—Pngtree—creative\ hand\ painted\ cake\ logo_5463247.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 350px;
+      height: 350px;
+  }
+
+  .logoTitle{
+      margin: 0;
+  }

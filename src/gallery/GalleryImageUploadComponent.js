@@ -9,7 +9,7 @@ export const GalleryImageUploadComponent = (props) =>{
         <div className="imageUpload">
           <h3>Upload Image to Cloudinary</h3>
     
-            <input type="file" name="file" placeholder="Upload An Image" onChange={pickImage}
+            <input type="file" name="file" placeholder="Upload An Image" onChange={pickImage} className="fileInput"
             />
             <div className="buttonDiv">
             <button name='file' onClick={addImage}>

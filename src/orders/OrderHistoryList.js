@@ -14,8 +14,8 @@ export const OrderHistoryList = ({history}) =>{
 
     return (
         <>
-        <h1>Order History</h1>
         <div className="test">
+        <h1>Order History</h1>
             {
                 orders.map(order =>{
                     const bakedGood = bakedGoods.find(

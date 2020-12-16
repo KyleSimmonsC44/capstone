@@ -23,11 +23,13 @@ export const BakedGoodsList = () => {
 
     return (
 
-        <div>
-            <h3>About Us!</h3>
-            <p>Ipsum</p>
+        <div className="aboutSection">
+            <h3 className="bakedGoods__name">About Us!</h3>
+            <div className="aboutUsDiv">
+            We are a family bakery based out of Nashville, TN that specializes in elaborate cake design, and any traditional southern deserts. Our family matriarch, Sue, has been teaching all of her children and grandchildren the wonderful art of baking since as soon as we could stand on a stool and lick batter off of a spoon. We are proud to share our baked goods with you all! Feel free to check out the gallery to view any past designs done by Sue herself, or to place an order once you make an account with us!
+            </div>
         <div className="bakedgoods">
-            <h3>Pricing Information</h3>
+            <h3  className="bakedGoods__name">We're Currently Baking:</h3>
         {
             bakedGoods.map(bakedGood => <BakedGoods key={bakedGood.id} bakedGoods={bakedGood} />)
         }

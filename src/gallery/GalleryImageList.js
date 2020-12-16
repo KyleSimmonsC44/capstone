@@ -12,7 +12,7 @@ export const GalleryImageList = ({history}) =>{
     return (
         <>
         <h1>Gallery</h1>
-        <div className="test">
+        <div className="test--gallery">
             {
                 imageUrls.map(iu =>{
                     return <GalleryImage key={iu.id} url={iu}/>
