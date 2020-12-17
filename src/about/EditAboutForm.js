@@ -11,14 +11,17 @@ export const EditAboutForm = (props) =>{
         getAbout()
     },[])
 
-    useEffect(() =>{
-        console.log(about[0])
-        const aboutObj = about.find(a=>parseInt(a.id) === parseInt(props.match.params.aboutId))
-        console.log(aboutObj)
+    const getAboutbyIdInEditMode = () => {
+        const aboutObj = about.find(a=>parseInt(a.id) === parseInt(props.match.params.aboutId)) || {}
         setAboutState(aboutObj)
-    },[about])
+    }
 
+        useEffect(() =>{
+            getAboutbyIdInEditMode()
+        },[about])
 
+    const aboutObj = about.find(a=>parseInt(a.id) === parseInt(props.match.params.aboutId))
+    console.log(aboutObj)
 console.log(aboutState)
 
     return(
@@ -27,7 +30,7 @@ console.log(aboutState)
             <fieldset className="editDiv">
                 <div className="editStyleBox">
                 <div className="form-group">
-                    <textarea name="about" defaultValue={aboutState.text}  required autoFocus ref={aboutText} rows="6" cols="75">
+                    <textarea name="about" defaultValue={aboutState.text} required autoFocus ref={aboutText} rows="10" cols="125">
 
                     </textarea>
                 </div>
