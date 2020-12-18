@@ -12,7 +12,11 @@ export const GalleryImageUploadComponent = (props) =>{
             <input type="file" name="file" placeholder="Upload An Image" onChange={pickImage} className="fileInput"
             />
             <div className="buttonDiv">
-            <button name='file' onClick={addImage}>
+            <button name='file' onClick={()=>{
+            addImage()
+            alert("you have uploaded an image!")
+            }
+            }>
               Upload!
             </button>
             </div>

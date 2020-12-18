@@ -30,7 +30,7 @@ console.log(aboutState)
             <fieldset className="editDiv">
                 <div className="editStyleBox">
                 <div className="form-group">
-                    <textarea name="about" defaultValue={aboutState.text} required autoFocus ref={aboutText} rows="10" cols="125">
+                    <textarea name="about" defaultValue={aboutState.text} required autoFocus ref={aboutText} rows="15" cols="225">
 
                     </textarea>
                 </div>

@@ -82,6 +82,7 @@ export const ApplicationViews = (props) =>{
       'We are interior designers',
       'We are teachers',
       'We are artists',
+      'We are veterans',
       'We are One Big Happy Family'
     ]}/>}
                         />
