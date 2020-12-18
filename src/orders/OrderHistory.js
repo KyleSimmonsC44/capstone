@@ -4,6 +4,15 @@ import { OrderContext } from "./OrderProvider"
 // sets all of the conditional logic for the user's order history. 
 export const OrderHistory = ({order, bakedGood, user}) =>{
     const { deleteOrder } = useContext(OrderContext)
+    if(!order){
+        order = {}
+    }
+    if(!bakedGood){
+        bakedGood ={}
+    }
+    if(!user){
+        user={}
+    }
 if(order.responded === true){
 
     if(order.accepted === true && order.completed === false){

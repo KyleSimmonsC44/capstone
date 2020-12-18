@@ -5,11 +5,11 @@
     z-index: 2;
     border-bottom: 1px solid black;
     margin: 0;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 30px;
+    position: sticky;
 }
 
 .navbar__item {
@@ -28,4 +28,9 @@
     color: white;
     background-color:  rgba(0,0,0, 0.4);
     border-radius: 5px;
+}
+
+.navbar:hover{
+    transition: .3s;
+    background-color: rgba(0,0,0, 0.1);
 }
